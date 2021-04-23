@@ -1,5 +1,5 @@
 # JWT Refresh Token
-Plugin wordpress bazujący na wtyczce [JWT Auth](https://wordpress.org/plugins/jwt-auth/) autorstwa [Useful Team](https://usefulteam.com/).
+JWT Refresh Token jest to plugin Wordpress rozszerzający możliwości wtyczki [JWT Auth](https://wordpress.org/plugins/jwt-auth/) stworzonej przez [Useful Team](https://usefulteam.com/).
 
 ## JWT Auth
 JWT Auth dodaje do strony 2 punkty API:
