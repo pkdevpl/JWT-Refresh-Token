@@ -1,5 +1,5 @@
 # JWT Refresh Token
-Plugin wordpress bazujący na wtyczce JWT Auth.
+Plugin wordpress bazujący na wtyczce [a link](https://wordpress.org/plugins/jwt-auth/)JWT Auth.
 
 Rozszerza podstawowe funkcje JWT Auth o dodatkowe endpointy, pozwalające na:
 * Wygenerowanie dodatkowego refresh-token przechowywanego w przeglądarce jako secure cookie
