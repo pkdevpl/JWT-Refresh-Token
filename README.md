@@ -41,7 +41,7 @@ Dzięki takiemu mechanizmowi, podstawowy token JWT zachowuje ważność jedynie 
 ## Wersja DEMO
 Wtyczkę tymczasowo można przetestować poprzez aplikację [Postman](https://postman.com), kierując zapytania pod adresy:
 
-**Logowanie** - zapytanie `POST` zawierające `email` i `password`:
+**Logowanie** - zapytanie `POST` zawierające `username` i `password`:
 
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/token```
 
