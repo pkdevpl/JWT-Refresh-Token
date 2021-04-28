@@ -42,18 +42,23 @@ Dzięki takiemu mechanizmowi, podstawowy token JWT zachowuje ważność jedynie 
 Wtyczkę tymczasowo można przetestować poprzez aplikację [Postman](https://postman.com), kierując zapytania pod adresy:
 
 **Logowanie** - zapytanie `POST` zawierające `email` i `password`:
+
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/token```
 
 **Weryfikacja** - zapytanie `GET` z headerem `Authorization: Bearer JWT_TOKEN`:
+
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/token/validate```
 
 **Rejestracja** - zapytanie `POST` zawierające `email`, `username` i `password`:
+
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/register-user```
 
 **Rejestracja** - zapytanie `GET` po zalogowaniu:
+
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/refresh```
 
 **Resetowanie hasła** - zapytanie `POST` zawierające `email` pod adres:
+
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/refresh```
 
 Głównym celem wtyczki jest udostępnienie mechanizmu logowania i komunikacji dla stron Single Page Application napisanych z użyciem biblioteki React, Vue, czy Angular.
