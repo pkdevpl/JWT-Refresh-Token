@@ -20,7 +20,7 @@ Podstawowa wtyczka dodaje do strony 2 endpointy REST:
 * /wp-json/jwt-auth/v1/token
 * /wp-json/jwt-auth/v1/token/validate
 
-Pierwszy z nich pozwala zalogować się do strony za pomocą zapytania `POST` zawierającego `email` i `password`. Jeżeli użytkownik istnieje w bazie, zapytanie zwróci tymczasowy `JSON Web Token (JWT)`, który aplikacja może wykorzystywać w dalszej komunikacji, umieszczając go w headerze `Authorization: Bearer JWT_TOKEN`.
+Pierwszy z nich pozwala zalogować się do strony za pomocą zapytania `POST` zawierającego w `body` pola `username` i `password`. Jeżeli użytkownik istnieje w bazie, zapytanie zwróci tymczasowy `JSON Web Token (JWT)`, który aplikacja może wykorzystywać w dalszej komunikacji, umieszczając go w headerze `Authorization: Bearer JWT_TOKEN`.
 
 Drugi punkt API pozwala zweryfikować wygenerowany wcześniej token JWT.
 
