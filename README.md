@@ -45,7 +45,7 @@ Wtyczkę tymczasowo można przetestować poprzez aplikację [Postman](https://po
 
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/token```
 
-**Weryfikacja** - zapytanie `GET` z headerem `Authorization: Bearer JWT_TOKEN`:
+**Weryfikacja** - zapytanie `POST` z headerem `Authorization: Bearer JWT_TOKEN`:
 
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/token/validate```
 
