@@ -20,7 +20,7 @@ Podstawowa wtyczka dodaje do strony 2 endpointy REST:
 * /wp-json/jwt-auth/v1/token
 * /wp-json/jwt-auth/v1/token/validate
 
-Pierwszy z nich pozwala zalogować się do strony za pomocą zapytania `POST` zawierającego `email` i `password`. Jeżeli użytkownik istnieje w bazie, zapytanie zwróci tymczasowy `JSON Web Token (JWT)`, który aplikacja może wykorzystywać w dalszej komunikacji, umieszczając go w headerze `Bearer`.
+Pierwszy z nich pozwala zalogować się do strony za pomocą zapytania `POST` zawierającego `email` i `password`. Jeżeli użytkownik istnieje w bazie, zapytanie zwróci tymczasowy `JSON Web Token (JWT)`, który aplikacja może wykorzystywać w dalszej komunikacji, umieszczając go w headerze `Authorization: Bearer JWT_TOKEN`.
 
 Drugi punkt API pozwala zweryfikować wygenerowany wcześniej token JWT.
 
@@ -37,5 +37,18 @@ Dzięki takiemu mechanizmowi, podstawowy token JWT zachowuje ważność jedynie 
 **Rejestrowanie użytkowników** polega na wysłaniu zapytania `POST` pod adres `/jwt-auth/v1/register-user`. Zapytanie musi zawierać `username`, `email` oraz `password`. Strona automatycznie utworzy konto użytkownika i odeśle nowy token JWT.
 
 **Resetowanie hasła** wymaga wysłania zapytania `POST` pod adres `/jwt-auth/v1/reset-password` zawierającego `email` użytkownika. Po sprawdzeniu danych, Wordpress wyśle link do zresetowania hasła dla wskazanego użytkownika. Link resetujący hasło umożliwia przekierowanie użytkownika do niestandardowego formularza ustawiania hasła. Przekierowanie zachowuje jednak te same standardy bezpieczeństwa co standardowy formularz Wordpress.
+
+## Wersja DEMO
+Wtyczkę tymczasowo można przetestować poprzez aplikację [Postman](https://postman.com), kierując zapytania pod adresy:
+**Logowanie** zapytanie `POST` zawierające `email` i `password`:
+`http://wp.pkdev.pl/wp-json/jwt-auth/v1/token`
+**Weryfikacja** zapytanie `GET` z headerem `Authorization: Bearer JWT_TOKEN`:
+`http://wp.pkdev.pl/wp-json/jwt-auth/v1/token/validate`
+**Rejestracja** zapytanie `POST` zawierające `email`, `username` i `password`:
+`http://wp.pkdev.pl/wp-json/jwt-auth/v1/register-user`
+**Rejestracja** zapytanie `GET` po zalogowaniu:
+`http://wp.pkdev.pl/wp-json/jwt-auth/v1/refresh`
+**Resetowanie hasła** zapytanie `POST` zawierające `email` pod adres:
+`http://wp.pkdev.pl/wp-json/jwt-auth/v1/refresh`
 
 Głównym celem wtyczki jest udostępnienie mechanizmu logowania i komunikacji dla stron Single Page Application napisanych z użyciem biblioteki React, Vue, czy Angular.
