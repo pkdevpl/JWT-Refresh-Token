@@ -52,7 +52,7 @@ Wtyczkę można przetestować w aplikacji [Postman](https://postman.com), kieruj
 **Rejestracja** - zapytanie `POST` zawierające `email`, `username` i `password`:  
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/register-user```
 
-**Rejestracja** - zapytanie `GET` po zalogowaniu:  
+**Odświeżenie** - zapytanie `GET` po zalogowaniu:  
 ```http://wp.pkdev.pl/wp-json/jwt-auth/v1/refresh```
 
 **Resetowanie hasła** - zapytanie `POST` zawierające `email` pod adres:  
