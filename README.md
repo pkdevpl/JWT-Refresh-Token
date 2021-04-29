@@ -2,7 +2,7 @@
 
 ## Wordpress REST API
 
-Jednym z ważnych mechanizmów Wordpress'a jest biblioteka WP REST API, dzięki której dowolna aplikacja może wysłać zapytanie HTTP na adres `http://my-wp-site.com/wp-json/` i otrzymać odpowiedź w formacie JSON.  Dzięki temu strona Wordpress może funkcjonować jako serwer REST.
+Jednym z ważnych mechanizmów Wordpress'a jest biblioteka WP REST API, dzięki której dowolny klient może wysłać zapytanie HTTP na adres `http://my-wp-site.com/wp-json/` i otrzymać odpowiedź w formacie JSON.  Dzięki temu strona Wordpress może funkcjonować jako serwer REST.
 
 JWT Refresh Token dodaje do Wordpress'a punkty REST, które pozwalają:
 * Zalogować się do serwera poprzez zapytanie `POST` i uzyskać `JSON Web Token (JWT)`.
